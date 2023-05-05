@@ -1,0 +1,25 @@
+<button mat-raised-button (click)="openAddDialog()">Add New Car</button>
+<nz-table #basicTable [nzData]="cars">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Colour</th>
+      <th>Engine Type</th>
+      <th>Manufacture Year</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of basicTable.data">
+      <td>{{car.brand}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.colour}}</td>
+      <td>{{car.engineType}}</td>
+      <td>{{car.manufactureYear}}</td>
+      <td>
+        <button class="editButton" (click)="updateCar(car)">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

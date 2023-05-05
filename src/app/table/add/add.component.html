@@ -1,0 +1,29 @@
+<h2>Add Car</h2>
+<form (submit)="addNewCar()">
+  <label>
+    Brand:
+    <input type="text" name="brand" [(ngModel)]="newCar.brand">
+  </label>
+  <br>
+  <label>
+    Model:
+    <input type="text" name="model" [(ngModel)]="newCar.model">
+  </label>
+  <br>
+  <label>
+    Colour:
+    <input type="text" name="colour" [(ngModel)]="newCar.colour">
+  </label>
+  <br>
+  <label>
+    Engine Type:
+    <input type="text" name="engineType" [(ngModel)]="newCar.engineType">
+  </label>
+  <br>
+  <label>
+    Manufacture Year:
+    <input type="number" name="manufactureYear" [(ngModel)]="newCar.manufactureYear">
+  </label>
+  <br>
+  <button type="submit">Add Car</button>
+</form>

@@ -1,0 +1,10 @@
+<div class="form-group">
+    <label for="brand">Brand</label>
+    <input type="text" class="form-control" id="brand" [(ngModel)]="data.colour" name="brand">
+  </div>
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" class="form-control" id="model" [(ngModel)]="data.engineType" name="model">
+  </div>
+
+  <button (click)="editCar()">Apply</button>
