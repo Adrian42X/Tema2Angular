@@ -1,15 +1,12 @@
-button {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
-    border: none; /* Remove button border */
-    padding: 12px 24px; /* Add some padding */
-    font-size: 16px; /* Increase font size */
-    border-radius: 5px; /* Round button edges */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease-in-out; /* Add transition effect */
-  }
-  
-  button:hover {
-    background-color: #3e8e41; /* Darker green background color on hover */
-  }
-  
+.title {
+  font-size: 36px; 
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(249, 228, 0); 
+}
+.home {
+  background-image: url("https://www.motortrend.com/uploads/2022/03/2022-Honda-Civic-Touring-vs-2022-Hyundai-Elantra-Limited-vs-2022-Kia-Forte-GT-vs-2022-Mazda-Mazda3-Sedan-AWD-Turbo-vs-2022-Nissan-Sentra-SR-vs-2022-Volkswagen-Jetta-SEL-19.jpg?fit=around%7C875:492");
+  background-size: cover;
+  background-position: center;
+}

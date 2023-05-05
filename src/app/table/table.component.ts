@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { TableService } from '../services/table.service';
 import { Car } from '../models/Car';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogConfig} from '@angular/material/dialog';
@@ -11,10 +11,17 @@ import { AddComponent } from './add/add.component';
 })
 export class TableComponent implements OnInit{
   cars:Car[]=[];
-  constructor(private carService:TableService,private dialog:MatDialog){}
+  constructor(private carService:TableService,private dialog:MatDialog,
+    private cdr: ChangeDetectorRef){}
 
   ngOnInit(): void {
+    this.showCars();
+  }
+
+  showCars()
+  {
     this.cars=this.carService.getAllCars();
+    this.cdr.detectChanges();
   }
 
   updateCar(car:Car){
@@ -24,9 +31,8 @@ export class TableComponent implements OnInit{
 
   openAddDialog(){
     let dialogRef = this.dialog.open(AddComponent);
-    this.cars=[...this.carService.getAllCars()];
-    //this.cars=[...this.cars];
-    console.log("add button triggered");
+    this.showCars();
+    this.cars=[...this.carService.getAllCars()]
   }
 
 }

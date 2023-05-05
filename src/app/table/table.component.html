@@ -1,5 +1,5 @@
-<button mat-raised-button (click)="openAddDialog()">Add New Car</button>
-<nz-table #basicTable [nzData]="cars">
+<button class="add-button" mat-raised-button (click)="openAddDialog()">Add New Car</button>
+<nz-table #basicTable [nzData]="cars" class="table">
   <thead>
     <tr>
       <th>Brand</th>
@@ -18,7 +18,7 @@
       <td>{{car.engineType}}</td>
       <td>{{car.manufactureYear}}</td>
       <td>
-        <button class="editButton" (click)="updateCar(car)">Update</button>
+        <span nz-icon nzType="edit" nzTheme="twotone" class="edit-icon" (click)="updateCar(car)"></span>
       </td>
     </tr>
   </tbody>

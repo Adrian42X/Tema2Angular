@@ -53,6 +53,5 @@ export class TableService {
   addCar(car:Car){
     car.id=this.index++;
     this.cars.push(car);
-    console.log("car added from service"+this.index+car.brand);
   }
 }

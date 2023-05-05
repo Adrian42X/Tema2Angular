@@ -8,6 +8,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddComponent } from '../table/add/add.component';
 import { UpdateComponent } from '../table/update/update.component';
 import { FormsModule } from '@angular/forms';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 @NgModule({
   declarations: [HomeComponent,TableComponent, AddComponent,UpdateComponent],
   imports: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HomeRoutingModule,
     NzTableModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    NzIconModule
   ]
 })
 export class HomeModule { }

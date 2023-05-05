@@ -23,6 +23,5 @@ export class AddComponent {
   addNewCar(){
     if(this.newCar!=undefined)
       this.carService.addCar(this.newCar);
-    console.log("add car button");
   }
 }
